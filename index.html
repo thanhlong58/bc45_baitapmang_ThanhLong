@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập mảng bc45</title>
+
+
+
+
+
+    <!--boostrap-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+    <!--csss-->
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <p>mang cac so nguyen [<span id="arrNumber"></span>]</p>
+        <input type="text" class="form-control w-25" id="nhap-so">
+        <button class="btn btn-dark" id="btnThemSoNguyen">btn them so nguyen</button>
+
+        <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <!--tab-->
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'bai-1')" id="defaultOpen">Tổng số dương</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-2')">Đếm số dương</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-3')">Tìm số nhỏ nhất</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-4')">Tìm số dương nhỏ nhất</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-5')">Tìm số chẵn cuối cùng</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-6')">Đổi chỗ</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-7')">Sắp xếp tăng dần</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-8')">Tìm số nguyên tố đầu tiên</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-9')">Đếm số nguyên</button>
+        <button class="tablinks" onclick="openTab(event, 'bai-10')">So sánh số lượng số âm và số dương</button>
+
+    </div>
+
+
+
+    <div class="noi-dung">
+        <div id="bai-1" class="tabcontent">
+
+            <!--tinh tong so duong-->
+            <button class="btn btn-danger my-2" id="btnTinhTong">tinh tong so duong</button>
+            <div class="alert alert-primary " id="ket-qua-1">
+
+            </div>
+
+
+        </div>
+
+        <div id="bai-2" class="tabcontent">
+            <!--dem so duong-->
+            <button class="btn btn-dark" id="btnDemSoDuong">dem so duong</button>
+            <div class="alert alert-success" id="ket-qua-2">
+
+            </div>
+
+        </div>
+
+        <div id="bai-3" class="tabcontent">
+            <!--tim so nho nhat-->
+
+            <button class="btn btn-warning" id="btnTimSoNhoNhat">tim so nho nhat</button>
+            <div class="alert alert-info" id="ket-qua-3">
+
+            </div>
+
+        </div>
+
+        <div id="bai-4" class="tabcontent">
+            <!--tim so duong nho nhat-->
+
+            <button class="btn btn-dark" id="btnTimSoDuongNhoNhat">tim so duong nho nhat</button>
+
+            <div class="alert alert-success" id="ket-qua-4">
+
+            </div>
+
+        </div>
+
+        <div id="bai-5" class="tabcontent">
+            <!--tìm số chẵn cuối cùng trong mảng-->
+            <button class="btn btn-dark" id="btnTimSoChanCuoiCung">tìm số chẵn cuối cùng</button>
+
+            <div class="alert alert-info" id="ket-qua-5">
+
+            </div>
+
+        </div>
+
+        <div id="bai-6" class="tabcontent">
+            <!--đổi chỗ 2 giá trị trong mảng theo vị trí(cho nhập vào 2 vị trí muốn đổi chỗ giá trị)-->
+            <div class="row">
+                <div class="col-6 form-group">
+                    <p>nhập số vị trí 1</p>
+                    <input type="tSxt" class="form-control" id="vi-tri-1">
+                </div>
+
+                <div class="col-6 form-group">
+                    <p>nhập số vị trí 2</p>
+                    <input type="text" class="form-control" id="vi-tri-2">
+                </div>
+            </div>
+
+            <button class="btn btn-dark" id="btnDoiCho">Đổi chỗ</button>
+
+            <div class="alert alert-primary" id="ket-qua-6">
+
+            </div>
+
+
+
+        </div>
+
+        <div id="bai-7" class="tabcontent">
+            <!--sắp xếp mảng theo thứ tự tăng dần-->
+
+            <button class="btn btn-dark my-2" id="btnSapXep">Xếp</button>
+
+            <div class="alert alert-info" id="ket-qua-7">
+
+            </div>
+
+
+        </div>
+
+        <div id="bai-8" class="tabcontent">
+            <!-- tìm số nguyên tố đầu tiên trong mảng -->
+
+            <button class="btn btn-success my-2" id="btnTimSoNguyenToDauTien">Tìm số nguyên tố</button>
+
+            <div class="alert alert-danger" id="ket-qua-8">
+
+            </div>
+
+
+
+
+        </div>
+
+        <div id="bai-9" class="tabcontent">
+            <!--đếm số nguyên-->
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" class="form-control" id="nhap-so-random" placeholder="Nhập số">
+                </div>
+
+               <button class="btn btn-primary d-inline-block col-6 " id="btnThemSoRandom">Thêm số</button>
+            </div>
+
+            <button class="btn btn-primary" id="btnDemSoNguyen">Đếm số nguyên</button>
+
+            <div class="alert alert-info" id="ket-qua-9"></div>
+
+
+
+
+
+        </div>
+
+
+        <div id="bai-10" class="tabcontent">
+
+        <!--so sánh số lượng số âm và số dương-->
+        <button class="btn btn-primary" id="btnSoSanh2So">So sánh</button>
+        <div class="alert alert-success" id="ket-qua-10"></div>
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <!--boostrap-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+ 
+        <!--js-->
+
+    <script src="/index.js"></script>
+
+</body>
+
+</html>
