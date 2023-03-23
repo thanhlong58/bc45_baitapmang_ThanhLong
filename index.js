@@ -37,7 +37,7 @@ document.getElementById('arrNumber').innerHTML = arrNumber ;
 
 
 
-//tong cac so 
+//TỔNG CÁC SỐ
 
 document.getElementById('btnTinhTong').onclick = function () {
 
@@ -56,8 +56,7 @@ document.getElementById ('ket-qua-1').innerHTML = tongCacSo;
 
 
 
-//dem so  duong
-
+//ĐẾM SỐ DƯƠNG
 document.getElementById('btnDemSoDuong').onclick = function () {
     var soNguyen = +document.getElementById ('nhap-so').value;
     var demSo = 0 ;
@@ -74,7 +73,7 @@ document.getElementById('btnDemSoDuong').onclick = function () {
 
 
 
-//tim so  nho nhat
+//TÌM SỐ NHỎ NHÁT
 document.getElementById ('btnTimSoNhoNhat').onclick = function () {
     var min  =  arrNumber[0];
     for ( var index = 0 ; index <= arrNumber.length; index++) {
@@ -88,7 +87,7 @@ document.getElementById ('btnTimSoNhoNhat').onclick = function () {
  
 
 
-//tim so duong nho nhat   
+//TÌM SỐ DƯƠNG NHỎ NHẤT
 document.getElementById('btnTimSoDuongNhoNhat').onclick = function () {
   
     
@@ -116,7 +115,7 @@ document.getElementById('btnTimSoDuongNhoNhat').onclick = function () {
 }
 
 
-// tìm số chẵn cuối cùng trong mảng
+// TÌM SỐ CHẴN CUỐI CÙNG TRONG MẢNG
 
 document.getElementById('btnTimSoChanCuoiCung').onclick = function () {
 
@@ -162,16 +161,16 @@ document.getElementById('btnDoiCho').onclick = function () {
 }
 
 
-//sắp xếp mảng theo thứ tự tăng dần  //đang  cấn
+//SẮP XẾP THEO THỨ TỰ TĂNG DẦN
 document.getElementById('btnSapXep').onclick = function () {
    var arrSort = _.sortBy(arrNumber);
 
-document.getElementById('ket-qua-7').innerHTML = arrSort;
+document.getElementById('ket-qua-7').innerHTML = `Mảng sau khi sắp xếp: ${arrSort}` ;
 
 }
 
 
-//tìm số nguyên tố đầu tiên trong mảng
+//TÌM SỐ NGUYÊN TỐ ĐẦU TIÊN TRONG MẢNG
 document.getElementById('btnTimSoNguyenToDauTien').onclick =  function () {
     var soNguyenTo = 0 ;
     
@@ -193,7 +192,7 @@ document.getElementById('btnTimSoNguyenToDauTien').onclick =  function () {
   }
 
 
-//Đếm số nguyên
+//ĐẾM SỐ NGUYÊN
 
 document.getElementById('btnThemSoRandom').onclick = function () {
     var soRanDom = +document.getElementById('nhap-so-random').value;
@@ -218,7 +217,7 @@ document.getElementById('btnDemSoNguyen').onclick = function () {
     document.getElementById('ket-qua-9').innerHTML = soNguyen;
     
 }
-//so sánh số lượng số âm và số dương
+//SO SÁNH SỐ LƯỢNG SỐ ÂM VÀ SỐ DƯƠNG
 
 
 
