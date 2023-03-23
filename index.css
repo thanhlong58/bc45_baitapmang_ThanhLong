@@ -1,6 +1,9 @@
 * {box-sizing: border-box}
 body {font-family: "Lato", sans-serif;}
 
+body {
+  background-image: url(/img/Background-trang.jpg);
+}
 .tab {
   float: left;
   border: 1px solid #ccc;
@@ -8,6 +11,10 @@ body {font-family: "Lato", sans-serif;}
   width: 30%;
  
   border-radius: 10px 0 0 10px;
+}
+
+.noi-dung-bai-tap .tab .tablinks{
+  border-bottom: 2px solid rgb(74, 69, 59);
 }
 
 .tab button {
