@@ -16,7 +16,7 @@ function openTab(evt, cityName) {
   document.getElementById("defaultOpen").click();
 
 
-
+//MẢNG CÁC SỐ 
 
  var arrNumber = [];
  var arrSoDuong = [];
@@ -129,7 +129,7 @@ document.getElementById('btnTimSoChanCuoiCung').onclick = function () {
           soChanCuoi = arrNumber[index];
           break;
         }
-        // soChanCuoi = soChan;
+       
     }
     document.getElementById('ket-qua-5').innerHTML = soChanCuoi;
 
@@ -143,7 +143,7 @@ document.getElementById('btnDoiCho').onclick = function () {
     var viTriSo1 = +document.getElementById('vi-tri-1').value;
     var viTriSo2 = +document.getElementById('vi-tri-2').value;
     var giaTri1 = 0;
-    var giaTri2 = 0;
+    
     //output 
 
     //process
@@ -173,48 +173,51 @@ document.getElementById('ket-qua-7').innerHTML = `Mảng sau khi sắp xếp: ${
 //TÌM SỐ NGUYÊN TỐ ĐẦU TIÊN TRONG MẢNG
 document.getElementById('btnTimSoNguyenToDauTien').onclick =  function () {
     var soNguyenTo = 0 ;
-    
-    for (let i = 0; i < arrNumber.length; i++) {
-      let isPrime = true;
-     
-      for (let j = 2; j < arrNumber[i]; j++) {
-        if (arrNumber[i] % j === 0) {
-          isPrime = false;
-          break;
+    var laSoNguyenTo = true;
+    for (var i = 0; i < arrNumber.length; i++) {
+      
+      for (var j = 2; j < arrNumber[i]; j++) {
+       
+          if (arrNumber[i] % j === 0) {
+          laSoNguyenTo = false;
+         
         }
       }
-      if (isPrime && arrNumber[i] > 1) {
+      if (laSoNguyenTo && arrNumber[i] > 1) {
         soNguyenTo = arrNumber[i];
         break;
+        
       }
     }
     document.getElementById('ket-qua-8').innerHTML  = soNguyenTo;
   }
 
 
-//ĐẾM SỐ NGUYÊN
 
+
+//ĐẾM SỐ NGUYÊN
+var arrSoNguyen = [];
 document.getElementById('btnThemSoRandom').onclick = function () {
     var soRanDom = +document.getElementById('nhap-so-random').value;
    
-    arrNumber.push(soRanDom);
+    arrSoNguyen.push(soRanDom);
 
-    document.getElementById('arrNumber').innerHTML = arrNumber;
+    document.getElementById('divChuaSoNguyen').innerHTML = arrSoNguyen;
 }
 
 
 document.getElementById('btnDemSoNguyen').onclick = function () {
-
+    var htmlString = ''
     var soNguyen = 0;
-    for(var index= 0 ;index < arrNumber.length;index++) {
+    for(var index= 0 ;index < arrSoNguyen.length;index++) {
 
-        if (Number.isInteger(arrNumber[index])) {
+        if (Number.isInteger(arrSoNguyen[index])) {
             soNguyen ++;
            
         }
         
     }
-    document.getElementById('ket-qua-9').innerHTML = soNguyen;
+    document.getElementById('ket-qua-9').innerHTML = htmlString = `Sô nguyên: ${soNguyen}`
     
 }
 //SO SÁNH SỐ LƯỢNG SỐ ÂM VÀ SỐ DƯƠNG
