@@ -173,8 +173,9 @@ document.getElementById('ket-qua-7').innerHTML = `Mảng sau khi sắp xếp: ${
 //TÌM SỐ NGUYÊN TỐ ĐẦU TIÊN TRONG MẢNG
 document.getElementById('btnTimSoNguyenToDauTien').onclick =  function () {
     var soNguyenTo = 0 ;
-    var laSoNguyenTo = true;
+    
     for (var i = 0; i < arrNumber.length; i++) {
+        var laSoNguyenTo = true;
       
       for (var j = 2; j < arrNumber[i]; j++) {
        
