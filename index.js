@@ -172,22 +172,24 @@ document.getElementById('ket-qua-7').innerHTML = `Mảng sau khi sắp xếp: ${
 
 //TÌM SỐ NGUYÊN TỐ ĐẦU TIÊN TRONG MẢNG
 document.getElementById('btnTimSoNguyenToDauTien').onclick =  function () {
-    
+    var soNguyenTo = 0 ;
     
     for (var i = 0; i < arrNumber.length; i++) {
-        var soNguyenTo = 0 ;
+       
         var laSoNguyenTo = true;
       
       for (var j = 2; j < arrNumber[i]; j++) {
        
-          if (arrNumber[i] % j === 0) {
-          laSoNguyenTo = false;
+          if (arrNumber[i] % j === 0 && arrNumber[i] !== 2) {
+          laSoNguyenTo = false
+          break;
          
         }
       }
       if (laSoNguyenTo && arrNumber[i] > 1 ) {
         soNguyenTo = arrNumber[i];
         break;
+        
         
       }
     }
