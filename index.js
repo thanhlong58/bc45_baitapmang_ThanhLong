@@ -172,9 +172,10 @@ document.getElementById('ket-qua-7').innerHTML = `Mảng sau khi sắp xếp: ${
 
 //TÌM SỐ NGUYÊN TỐ ĐẦU TIÊN TRONG MẢNG
 document.getElementById('btnTimSoNguyenToDauTien').onclick =  function () {
-    var soNguyenTo = 0 ;
+    
     
     for (var i = 0; i < arrNumber.length; i++) {
+        var soNguyenTo = 0 ;
         var laSoNguyenTo = true;
       
       for (var j = 2; j < arrNumber[i]; j++) {
@@ -184,7 +185,7 @@ document.getElementById('btnTimSoNguyenToDauTien').onclick =  function () {
          
         }
       }
-      if (laSoNguyenTo && arrNumber[i] > 1) {
+      if (laSoNguyenTo && arrNumber[i] > 1 ) {
         soNguyenTo = arrNumber[i];
         break;
         
@@ -218,7 +219,7 @@ document.getElementById('btnDemSoNguyen').onclick = function () {
         }
         
     }
-    document.getElementById('ket-qua-9').innerHTML = htmlString = `Sô nguyên: ${soNguyen}`
+    document.getElementById('ket-qua-9').innerHTML = htmlString = `Số nguyên: ${soNguyen}`
     
 }
 //SO SÁNH SỐ LƯỢNG SỐ ÂM VÀ SỐ DƯƠNG
@@ -246,5 +247,4 @@ document.getElementById('btnSoSanh2So').onclick = function () {
    document.getElementById('ket-qua-10').innerHTML = htmlString; 
 
   }
-
 
